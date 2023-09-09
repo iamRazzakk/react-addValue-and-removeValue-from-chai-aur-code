@@ -7,12 +7,20 @@ function App() {
   let [counter, setCounter] = useState(1)
   // let count = 15
   function addCount() {
-    let Counter = counter + 1
-    setCounter(Counter)
+    if (counter === 20) {
+      setCounter(20)
+    } else {
+      let Counter = counter + 1
+      setCounter(Counter)
+    }
   }
   function removeValue() {
-    let Counter = counter - 1
-    setCounter(Counter)
+    if (counter <= 0) {
+      setCounter(0)
+    } else {
+      let Counter = counter - 1
+      setCounter(Counter)
+    }
   }
 
   return (
